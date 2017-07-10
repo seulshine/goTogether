@@ -1,13 +1,11 @@
 package app.gotogether.com.go_together;
 
-
-
 /**
  * Created by seuls on 2017-07-07.
  */
 
-
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CalendarView;
@@ -30,8 +28,16 @@ public class MyPageActivity extends Activity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_my_page);
 
-            final EditText etUsername = (EditText) findViewById(R.id.etUsername);
-            final EditText etAge = (EditText) findViewById(R.id.etAge);
+            Intent intent = getIntent();
+            String name = intent.getStringExtra("name");
+            String username = intent.getStringExtra("username");
+            String nickname = intent.getStringExtra("nickname");
+
+            TextView viewNickname = (TextView) findViewById(R.id.nickname);
+            TextView viewName = (TextView) findViewById(R.id.nickname);
+
+            viewNickname.setText(name + "(nickname)");
+            viewName.setText(name + "(nickname)");
 
             cal = (CalendarView) findViewById(R.id.calendar);
             schedule = (TextView) findViewById(R.id.scheduleView);
