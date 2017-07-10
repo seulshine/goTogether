@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CalendarView;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -28,6 +29,9 @@ public class MyPageActivity extends Activity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_my_page);
+
+            final EditText etUsername = (EditText) findViewById(R.id.etUsername);
+            final EditText etAge = (EditText) findViewById(R.id.etAge);
 
             cal = (CalendarView) findViewById(R.id.calendar);
             schedule = (TextView) findViewById(R.id.scheduleView);
