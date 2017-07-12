@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.gotpgether.com.gotogehter.MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/button_dial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginRight="60dp"
+        android:onClick="onClick"
+        app:srcCompat="@mipmap/dial"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/button_sos" />
+
+    <ImageButton
+        android:id="@+id/button_sos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:onClick="onClick"
+        app:srcCompat="@mipmap/sos"
+        android:layout_marginEnd="76dp"
+        android:layout_above="@+id/button_dial"
+        android:layout_toStartOf="@+id/button_start" />
+
+    <ImageButton
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_sos"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="71dp"
+        android:onClick="onClick"
+        app:srcCompat="@mipmap/start" />
+
+    <ImageButton
+        android:id="@+id/button_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_dial"
+        android:layout_alignStart="@+id/button_start"
+        android:onClick="onClick"
+        app:srcCompat="@mipmap/end" />
+
+</RelativeLayout>
